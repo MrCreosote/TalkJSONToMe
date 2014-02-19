@@ -13,9 +13,12 @@ public class JavaJSON {
 		json.put("To infinity etc", Double.POSITIVE_INFINITY);
 		ObjectMapper om = new ObjectMapper();
 		om.configure(JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS, true);
-		String j = om.writeValueAsString(json);
-		System.out.println("Java JSON");
-		System.out.println(j);
+		System.out.println("Java testing " + json + ":");
+		System.out.println("ObjectMapper.writeValueAsString()");
+		System.out.println(om.writeValueAsString(json));
+		System.out.println("ObjectMapper");
+		System.out.println(om.readValue(
+				"{\"Not a number\": NaN, \"To infinity etc\": Infinity}", Map.class));
 		
 	}
 
