@@ -2,6 +2,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 
@@ -13,6 +14,7 @@ public class JavaJSON {
 		json.put("To infinity etc", Double.POSITIVE_INFINITY);
 		ObjectMapper om = new ObjectMapper();
 		om.configure(JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS, true);
+		om.configure(JsonGenerator.Feature.QUOTE_NON_NUMERIC_NUMBERS, false);
 		System.out.println("Java testing " + json + ":");
 		System.out.println("ObjectMapper.writeValueAsString()");
 		System.out.println(om.writeValueAsString(json));
