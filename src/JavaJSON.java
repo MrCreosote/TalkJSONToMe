@@ -16,7 +16,7 @@ public class JavaJSON {
 		System.out.println("Java testing " + json + ":");
 		System.out.println("ObjectMapper.writeValueAsString()");
 		System.out.println(om.writeValueAsString(json));
-		System.out.println("ObjectMapper");
+		System.out.println("ObjectMapper.readValue()");
 		System.out.println(om.readValue(
 				"{\"Not a number\": NaN, \"To infinity etc\": Infinity}", Map.class));
 		
