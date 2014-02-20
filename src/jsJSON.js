@@ -7,15 +7,17 @@ var printObj = function(object) {
     return output
 }
 
-var repl = function(key, value) { //makes stringify return null, not quite sure why - expected it to make no difference
-    if (isNaN(value)) {
-        return NaN;
-    }
-    if (value == Number.POSITIVE_INFINITY) {
-        return Number.POSITIVE_INFINITY;
-    }
-    if (value == Number.NEGATIVE_INFINITY) {
-        return Number.NEGATIVE_INFINITY;
+var repl = function(key, value) {
+    if (typeof(value) == "number") {
+        if (isNaN(value)) {
+            return NaN;
+        }
+        if (value == Number.POSITIVE_INFINITY) {
+            return Number.POSITIVE_INFINITY;
+        }
+        if (value == Number.NEGATIVE_INFINITY) {
+            return Number.NEGATIVE_INFINITY;
+        }
     }
     return value;
 }
