@@ -1,3 +1,5 @@
+//source : https://github.com/Canop/JSON.parseMore
+
 // Adapted from Crockford's JSON.parse (see https://github.com/douglascrockford/JSON-js)
 // This version adds support for NaN, -Infinity and Infinity.
 
