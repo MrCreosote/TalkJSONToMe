@@ -463,7 +463,7 @@
           } else if (className == numberClass) {
             // JSON numbers must be finite. `Infinity` and `NaN` are serialized as
             // `"null"`.
-            return value > -1 / 0 && value < 1 / 0 ? "" + value : "null";
+            return "" + value;
           } else if (className == stringClass) {
             // Strings are double-quoted and escaped.
             return quote("" + value);

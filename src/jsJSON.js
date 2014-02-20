@@ -38,4 +38,7 @@ try {
 }
 console.log("JSON.parseMore(): ");
 console.log(printObj(JSON.parseMore(js)));
+phantom.injectJs("./json3.js");
+console.log("JSON3.stringify():");
+console.log(JSON.stringify(j));
 phantom.exit();
